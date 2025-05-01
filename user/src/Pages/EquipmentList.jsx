@@ -165,7 +165,7 @@ function EquipmentList() {
                           <h5>Price</h5>
                           <span>Starts From</span>
                           <div className="price-tag">
-                            <h4>₹ {item.p_price}</h4>
+                            <h4>₹ {item.p_price}</h4><h6>/Day</h6>
                           </div>
                         </div>
                         <div className="pricing-body">
