@@ -59,7 +59,7 @@ function EditProduct() {
     }
 
     try {
-      await axios.post("http://localhost:8000/vendor/editProduct", formData);
+      await axios.post("https://equiprentals-backend.onrender.com/vendor/editProduct", formData);
       toast.success("Product Edited Successfully!!", {
         onClose: () => navigate("/vendor/products"),
       });
@@ -70,7 +70,7 @@ function EditProduct() {
 
   async function fetchData() {
     try {
-      const response = await axios.get("http://localhost:8000/getcategories");
+      const response = await axios.get("https://equiprentals-backend.onrender.com/getcategories");
       setCategory(response.data.categories);
     } catch (error) {
       console.error("Error fetching categories:", error);

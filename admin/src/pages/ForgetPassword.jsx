@@ -11,7 +11,7 @@ function ForgetPassword() {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:8000/admin/sendOtp", { email });
+      await axios.post("https://equiprentals-backend.onrender.com/admin/sendOtp", { email });
       toast.success("Email Sent Successfully!!", {
         onClose: () => navigate("/verifyOTP", { state: email }),
       });

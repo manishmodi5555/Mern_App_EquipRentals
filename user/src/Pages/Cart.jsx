@@ -31,7 +31,7 @@ function Cart() {
     try {
       setLoading(true);
       const response = await axios.get(
-        "http://localhost:8000/user/getCartItems"
+        "https://equiprentals-backend.onrender.com/user/getCartItems"
       );
 
       setData(response.data.cart);
@@ -47,7 +47,7 @@ function Cart() {
 
   async function handleRemove(id) {
     try {
-      await axios.post(`http://localhost:8000/user/removeCartItem`, {
+      await axios.post(`https://equiprentals-backend.onrender.com/user/removeCartItem`, {
         p_id: id,
       });
 
@@ -66,7 +66,7 @@ function Cart() {
 
     try {
       setLoading(true);
-      await axios.post("http://localhost:8000/user/addtocart", {
+      await axios.post("https://equiprentals-backend.onrender.com/user/addtocart", {
         p_id: id,
         p_qty: newQty,
       });
@@ -119,7 +119,7 @@ function Cart() {
 
     try {
       const orderResponse = await axios.post(
-        "http://localhost:8000/user/generateOrderId",
+        "https://equiprentals-backend.onrender.com/user/generateOrderId",
         { totalPrice: totalPayment }
       );
 
@@ -143,7 +143,7 @@ function Cart() {
         handler: async function (response) {
           try {
             const verifyResponse = await axios.post(
-              "http://localhost:8000/user/bookProducts",
+              "https://equiprentals-backend.onrender.com/user/bookProducts",
               {
                 total_amount: totalPayment,
                 payment_mode: "Razorpay",
@@ -220,7 +220,7 @@ function Cart() {
 
     try {
       const verifyResponse = await axios.post(
-        "http://localhost:8000/user/bookProducts",
+        "https://equiprentals-backend.onrender.com/user/bookProducts",
         {
           total_amount: totalPayment,
           payment_mode: "Cash",

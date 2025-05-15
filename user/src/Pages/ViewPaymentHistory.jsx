@@ -12,7 +12,7 @@ function ViewPaymentHistory() {
     try {
       setLoading(true);
       const response = await axios.get(
-        "http://localhost:8000/user/getPaymentHistory"
+        "https://equiprentals-backend.onrender.com/user/getPaymentHistory"
       );
       setData(response.data.data);
     } catch (error) {

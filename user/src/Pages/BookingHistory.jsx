@@ -18,7 +18,7 @@ function BookingHistory() {
     try {
       setLoading(true);
       const response = await axios.get(
-        "http://localhost:8000/user/getBookingHistory"
+        "https://equiprentals-backend.onrender.com/user/getBookingHistory"
       );
       setData(response.data.data);
     } catch (error) {
@@ -43,7 +43,7 @@ function BookingHistory() {
   ) => {
     try {
       const response = await axios.post(
-        `http://localhost:8000/user/addProductFeedback`,
+        `https://equiprentals-backend.onrender.com/user/addProductFeedback`,
         {
           cart_id,
           booking_id,
@@ -129,7 +129,7 @@ function BookingHistory() {
       }
 
       const response = await axios.post(
-        "http://localhost:8000/user/cancelbooking",
+        "https://equiprentals-backend.onrender.com/user/cancelbooking",
         { bookingId }
       );
 

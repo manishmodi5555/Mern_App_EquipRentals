@@ -77,7 +77,7 @@ function Signup() {
     }
 
     try {
-      await axios.post("http://localhost:8000/user/signup", formData);
+      await axios.post("https://equiprentals-backend.onrender.com/user/signup", formData);
       toast.success("Signup Successfully!!", {
         onClose: () => navigate("/login"),
       });

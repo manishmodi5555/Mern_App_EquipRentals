@@ -13,7 +13,7 @@ function ForgetPassword() {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:8000/user/sendOtp", { email });
+      await axios.post("https://equiprentals-backend.onrender.com/user/sendOtp", { email });
       toast.success("Email Sent Successfully!!", {
         onClose: () => navigate("/verifyOTP", { state: email }),
       });

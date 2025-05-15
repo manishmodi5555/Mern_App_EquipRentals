@@ -12,7 +12,7 @@ function ViewVendorPaymentHistory() {
     try {
       setLoading(true);
       const response = await axios.get(
-        "http://localhost:8000/vendor/getVendorPaymentHistory"
+        "https://equiprentals-backend.onrender.com/vendor/getVendorPaymentHistory"
       );
       // The API returns data inside response.data.data
       setData(response.data.data);

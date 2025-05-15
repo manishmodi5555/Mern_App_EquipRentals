@@ -36,7 +36,7 @@ function Contact() {
       return;
     }
     try {
-      await axios.post("http://localhost:8000/user/addFeedback", data);
+      await axios.post("https://equiprentals-backend.onrender.com/user/addFeedback", data);
       toast.success("Feedback sent successfully!", {
         onClose: () => navigate("/"),
       });

@@ -14,7 +14,7 @@ function GetProductFeedback() {
     try {
       setLoading(true);
       const response = await axios.post(
-        "http://localhost:8000/vendor/getProductWiseFeedback",
+        "https://equiprentals-backend.onrender.com/vendor/getProductWiseFeedback",
         {
           p_id: location.state._id,
         }

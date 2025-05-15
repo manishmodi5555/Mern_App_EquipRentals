@@ -13,7 +13,7 @@ function VendorForgetPassword() {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:8000/vendor/sendOtp", { email });
+      await axios.post("https://equiprentals-backend.onrender.com/vendor/sendOtp", { email });
       toast.success("Email Sent Successfully!!", {
         onClose: () => navigate("/vendor/verifyOTP", { state: email }),
       });

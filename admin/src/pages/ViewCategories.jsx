@@ -30,7 +30,7 @@ function ViewCategories() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/getcategories");
+      const response = await axios.get("https://equiprentals-backend.onrender.com/getcategories");
       setData(response.data.categories.reverse());
       setLoading(false);
     } catch (error) {
@@ -108,7 +108,7 @@ function ViewCategories() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.post(`http://localhost:8000/admin/deletecategory`, {
+      await axios.post(`https://equiprentals-backend.onrender.com/admin/deletecategory`, {
         catId: id,
       });
       message.success("Category deleted successfully");
@@ -123,13 +123,13 @@ function ViewCategories() {
     try {
       const values = await form.validateFields();
       if (editingCategory) {
-        await axios.post("http://localhost:8000/admin/editcategory", {
+        await axios.post("https://equiprentals-backend.onrender.com/admin/editcategory", {
           catId: editingCategory._id,
           ...values,
         });
         message.success("Category updated successfully");
       } else {
-        await axios.post("http://localhost:8000/admin/addCategory", values);
+        await axios.post("https://equiprentals-backend.onrender.com/admin/addCategory", values);
         message.success("Category added successfully");
       }
       setIsModalVisible(false);

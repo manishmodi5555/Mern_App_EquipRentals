@@ -18,7 +18,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:8000/admin/login", data);
+      await axios.post("https://equiprentals-backend.onrender.com/admin/login", data);
       toast.success("Logged In Successfully!!", {
         onClose: () => window.location.reload(),
       });

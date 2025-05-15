@@ -39,7 +39,7 @@ export default function Managepayment() {
   const getData = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8000/admin/getAllPayments"
+        "https://equiprentals-backend.onrender.com/admin/getAllPayments"
       );
       const responseData = response.data.payments || [];
       setDataItems(responseData);

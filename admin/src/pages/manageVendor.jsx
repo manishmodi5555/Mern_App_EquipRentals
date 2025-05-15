@@ -35,7 +35,7 @@ export default function Managevendor() {
   const getData = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8000/admin/getVendors"
+        "https://equiprentals-backend.onrender.com/admin/getVendors"
       );
       const responseData = response.data.vendors || [];
       const revesedData = responseData.reverse();
@@ -53,7 +53,7 @@ export default function Managevendor() {
 
   const handleBlock = async (id) => {
     try {
-      await axios.post(`http://localhost:8000/admin/updateVendorStatus`, {
+      await axios.post(`https://equiprentals-backend.onrender.com/admin/updateVendorStatus`, {
         userId: id,
         status: "blocked",
       });
@@ -67,7 +67,7 @@ export default function Managevendor() {
 
   const handleUnblock = async (id) => {
     try {
-      await axios.post(`http://localhost:8000/admin/updateVendorStatus`, {
+      await axios.post(`https://equiprentals-backend.onrender.com/admin/updateVendorStatus`, {
         userId: id,
         status: "active",
       });
@@ -300,13 +300,13 @@ export default function Managevendor() {
                                     <td className="d-flex align-items-center">
                                       <div className="d-inline-block">
                                         <a
-                                          href={`http://localhost:8000/images/idProofs/${item.idProof}`}
+                                          href={`https://equiprentals-backend.onrender.com/images/idProofs/${item.idProof}`}
                                           target="_blank"
                                           rel="noreferrer"
                                           className="btn btn-icon"
                                         >
                                           <img
-                                            src={`http://localhost:8000/images/idProofs/${item.idProof}`}
+                                            src={`https://equiprentals-backend.onrender.com/images/idProofs/${item.idProof}`}
                                             alt="ID Proof"
                                             className="img img-fluid"
                                           />

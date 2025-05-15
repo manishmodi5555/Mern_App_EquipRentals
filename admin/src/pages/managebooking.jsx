@@ -50,7 +50,7 @@ export default function Managebooking() {
   const getData = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8000/admin/getAllBookings"
+        "https://equiprentals-backend.onrender.com/admin/getAllBookings"
       );
       const responseData = response.data.data || [];
       setDataItems(responseData);

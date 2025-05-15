@@ -13,7 +13,7 @@ function Categories() {
   async function fetchData() {
     try {
       setLoading(true);
-      const response = await axios.get("http://localhost:8000/getcategories");
+      const response = await axios.get("https://equiprentals-backend.onrender.com/getcategories");
       setData(response.data.categories);
     } catch (error) {
       console.error("Error fetching categories:", error);

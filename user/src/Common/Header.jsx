@@ -27,7 +27,7 @@ function Header() {
 
   const handleLogout = async () => {
     try {
-      await axios.get("http://localhost:8000/logout");
+      await axios.get("https://equiprentals-backend.onrender.com/logout");
       localStorage.removeItem("role");
       toast.success("Logout Successfully!!", {
         onClose: () => window.location.reload(true),

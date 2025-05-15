@@ -24,7 +24,7 @@ function ChangePassword() {
     }
 
     try {
-      await axios.post("http://localhost:8000/user/changePassword", data);
+      await axios.post("https://equiprentals-backend.onrender.com/user/changePassword", data);
       toast.success("Password Reset Successfully!!", {
         onClose: () => navigate("/login"),
       });

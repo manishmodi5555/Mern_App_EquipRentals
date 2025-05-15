@@ -10,7 +10,7 @@ export default function Navbar() {
 
   const handleLogout = async () => {
     try {
-      await axios.get("http://localhost:8000/logout");
+      await axios.get("https://equiprentals-backend.onrender.com/logout");
       toast.success("Logout Successfully!!", {
         onClose: () => window.location.reload(),
       });

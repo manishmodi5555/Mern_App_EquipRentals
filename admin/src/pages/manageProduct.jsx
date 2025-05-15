@@ -36,7 +36,7 @@ export default function Manageproduct() {
   const getData = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8000/admin/getAllProducts"
+        "https://equiprentals-backend.onrender.com/admin/getAllProducts"
       );
       const responseData = response.data.products || [];
       console.log(responseData);
@@ -54,7 +54,7 @@ export default function Manageproduct() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.post(`http://localhost:8000/admin/deleteproduct`, {
+      await axios.post(`https://equiprentals-backend.onrender.com/admin/deleteproduct`, {
         product_id: id,
       });
       toast.success("Product deleted successfully");
@@ -282,13 +282,13 @@ export default function Manageproduct() {
                                     <td className="d-flex align-items-center justify-content-center">
                                       <div className="d-inline-block">
                                         <a
-                                          href={`http://localhost:8000/images/products/${item.p_imgs[0]}`}
+                                          href={`https://equiprentals-backend.onrender.com/images/products/${item.p_imgs[0]}`}
                                           target="_blank"
                                           rel="noreferrer"
                                           className="btn btn-icon "
                                         >
                                           <img
-                                            src={`http://localhost:8000/images/products/${item.p_imgs[0]}`}
+                                            src={`https://equiprentals-backend.onrender.com/images/products/${item.p_imgs[0]}`}
                                             alt="ID Proof"
                                             className="img img-fluid"
                                           />

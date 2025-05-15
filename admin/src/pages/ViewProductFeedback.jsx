@@ -43,7 +43,7 @@ function ViewProductFeedback() {
   const getData = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:8000/admin/getProductFeedback",
+        "https://equiprentals-backend.onrender.com/admin/getProductFeedback",
         { p_id: location.state._id }
       );
       const responseData = response.data.data || [];

@@ -16,7 +16,7 @@ function ViewProducts() {
       setLoading(true);
 
       const response = await axios.get(
-        "http://localhost:8000/vendor/getVendorProducts"
+        "https://equiprentals-backend.onrender.com/vendor/getVendorProducts"
       );
       const products = response.data.products;
 
@@ -39,7 +39,7 @@ function ViewProducts() {
     console.log(id);
 
     try {
-      await axios.post(`http://localhost:8000/vendor/deleteProduct`, {
+      await axios.post(`https://equiprentals-backend.onrender.com/vendor/deleteProduct`, {
         product_id: id,
       });
       fetchData(); // Refresh the product list after deletion
@@ -162,7 +162,7 @@ function ViewProducts() {
                           title="Equipment"
                         >
                           <img
-                            src={`http://localhost:8000/images/products/${item.p_imgs[0]}`}
+                            src={`https://equiprentals-backend.onrender.com/images/products/${item.p_imgs[0]}`}
                             alt={item.p_imgs[0]}
                             style={{
                               objectFit: "cover",

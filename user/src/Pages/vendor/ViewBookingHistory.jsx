@@ -14,7 +14,7 @@ function ViewBookingHistory() {
     try {
       setLoading(true);
       const response = await axios.get(
-        "http://localhost:8000/vendor/getVendorBookingHistory"
+        "https://equiprentals-backend.onrender.com/vendor/getVendorBookingHistory"
       );
       setData(response.data.data);
     } catch (error) {
@@ -56,7 +56,7 @@ function ViewBookingHistory() {
   ) => {
     try {
       const response = await axios.post(
-        `http://localhost:8000/vendor/addReturnComment`,
+        `https://equiprentals-backend.onrender.com/vendor/addReturnComment`,
         {
           cart_id,
           booking_id,

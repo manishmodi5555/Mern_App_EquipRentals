@@ -34,7 +34,7 @@ function Profile() {
     }
 
     try {
-      await axios.post("http://localhost:8000/user/updateProfile", data);
+      await axios.post("https://equiprentals-backend.onrender.com/user/updateProfile", data);
       toast.success("Profile Updated Successfully!!", {
         onClose: () => navigate("/"),
       });

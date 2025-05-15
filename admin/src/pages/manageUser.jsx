@@ -33,7 +33,7 @@ export default function Manageuser() {
 
   const getData = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/admin/getUsers");
+      const response = await axios.get("https://equiprentals-backend.onrender.com/admin/getUsers");
       const responseData = response.data.users || [];
       const revesedData = responseData.reverse();
       setDataItems(revesedData);
@@ -50,7 +50,7 @@ export default function Manageuser() {
 
   const handleBlock = async (id) => {
     try {
-      await axios.post(`http://localhost:8000/admin/updateUserStatus`, {
+      await axios.post(`https://equiprentals-backend.onrender.com/admin/updateUserStatus`, {
         userId: id,
         status: "blocked",
       });
@@ -64,7 +64,7 @@ export default function Manageuser() {
 
   const handleUnblock = async (id) => {
     try {
-      await axios.post(`http://localhost:8000/admin/updateUserStatus`, {
+      await axios.post(`https://equiprentals-backend.onrender.com/admin/updateUserStatus`, {
         userId: id,
         status: "active",
       });
@@ -276,13 +276,13 @@ export default function Manageuser() {
                                     <td className="d-flex align-items-center">
                                       <div className="d-inline-block">
                                         <a
-                                          href={`http://localhost:8000/images/idProofs/${item.idProof}`}
+                                          href={`https://equiprentals-backend.onrender.com/images/idProofs/${item.idProof}`}
                                           target="_blank"
                                           rel="noreferrer"
                                           className="btn btn-icon "
                                         >
                                           <img
-                                            src={`http://localhost:8000/images/idProofs/${item.idProof}`}
+                                            src={`https://equiprentals-backend.onrender.com/images/idProofs/${item.idProof}`}
                                             alt="ID Proof"
                                             className="img img-fluid"
                                           />

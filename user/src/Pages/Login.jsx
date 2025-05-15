@@ -25,7 +25,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:8000/user/login", data);
+      await axios.post("https://equiprentals-backend.onrender.com/user/login", data);
       localStorage.setItem("role", "user");
       toast.success("Login Successfully!!", {
         autoClose: 1000,

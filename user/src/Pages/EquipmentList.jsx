@@ -19,8 +19,8 @@ function EquipmentList() {
       setLoading(true);
       const url =
         !cat_id || cat_id === "undefined"
-          ? "http://localhost:8000/getproducts"
-          : `http://localhost:8000/getCategoriesWiseProducts/?cat_id=${cat_id}`;
+          ? "https://equiprentals-backend.onrender.com/getproducts"
+          : `https://equiprentals-backend.onrender.com/getCategoriesWiseProducts/?cat_id=${cat_id}`;
 
       const response = await axios.get(url);
       const products = response.data.products; // Get fetched data
@@ -150,7 +150,7 @@ function EquipmentList() {
                           title="Equipment"
                         >
                           <img
-                            src={`http://localhost:8000/images/products/${item.p_imgs[0]}`}
+                            src={`https://equiprentals-backend.onrender.com/images/products/${item.p_imgs[0]}`}
                             alt={item.p_imgs[0]}
                             style={{
                               objectFit: "cover",

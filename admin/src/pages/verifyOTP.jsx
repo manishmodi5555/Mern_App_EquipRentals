@@ -14,7 +14,7 @@ function VerifyOTP() {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:8000/VerifyOtp", {
+      await axios.post("https://equiprentals-backend.onrender.com/VerifyOtp", {
         email: Email,
         otp: Email_OTP,
       });

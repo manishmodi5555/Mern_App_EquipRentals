@@ -24,7 +24,7 @@ function VendorLogin() {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:8000/vendor/login", data);
+      await axios.post("https://equiprentals-backend.onrender.com/vendor/login", data);
       localStorage.setItem("role", "vendor");
       toast.success("Login Successfully!!", {
         onClose: () => window.location.reload(),

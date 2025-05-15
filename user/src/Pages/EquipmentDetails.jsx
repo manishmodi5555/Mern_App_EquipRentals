@@ -50,7 +50,7 @@ function EquipmentDetails() {
     }
 
     try {
-      await axios.post("http://localhost:8000/user/addtocart", {
+      await axios.post("https://equiprentals-backend.onrender.com/user/addtocart", {
         p_id: productDetails._id,
         vendor_id: productDetails.vendor_id,
         p_qty: quantity,
@@ -134,11 +134,11 @@ function EquipmentDetails() {
                         key={index}
                       >
                         <a
-                          href={`http://localhost:8000/images/products/${image}`}
+                          href={`https://equiprentals-backend.onrender.com/images/products/${image}`}
                           className="img-popup"
                         >
                           <img
-                            src={`http://localhost:8000/images/products/${image}`}
+                            src={`https://equiprentals-backend.onrender.com/images/products/${image}`}
                             alt={`Equipment ${index + 1}`}
                             style={{
                               objectFit: "cover",

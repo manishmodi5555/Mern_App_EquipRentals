@@ -39,7 +39,7 @@ export default function Managefeedback() {
   const getData = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8000/admin/getAllFeedback"
+        "https://equiprentals-backend.onrender.com/admin/getAllFeedback"
       );
       const responseData = response.data.feedbacks || [];
       setDataItems(responseData);
@@ -56,7 +56,7 @@ export default function Managefeedback() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.post(`http://localhost:8000/admin/deletefeedback`, {
+      await axios.post(`https://equiprentals-backend.onrender.com/admin/deletefeedback`, {
         feedbackId: id,
       });
       toast.success("Feedback deleted successfully");

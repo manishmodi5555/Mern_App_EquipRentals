@@ -5,7 +5,7 @@ axios.defaults.withCredentials = true;
 
 const checkSession = async () => {
   try {
-    const result = await axios.get("http://localhost:8000/session");
+    const result = await axios.get("https://equiprentals-backend.onrender.com/session");
     return { sessionData: result.data.sessionData.session, isAuth: true }; // Session is valid
   } catch (error) {
     console.log("error", error);

@@ -13,7 +13,7 @@ export default function Home() {
   const getData = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8000/admin/getAllBookings"
+        "https://equiprentals-backend.onrender.com/admin/getAllBookings"
       );
       const responseData = response.data.data || [];
       setDataItems(responseData);
@@ -27,7 +27,7 @@ export default function Home() {
   const getCounts = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8000/admin/getDashboardCounts"
+        "https://equiprentals-backend.onrender.com/admin/getDashboardCounts"
       );
       const responseData = response.data.data || [];
       setCounts(responseData);
