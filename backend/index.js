@@ -94,6 +94,8 @@ app.use(
         "http://localhost:3001",
         "http://localhost:5173",
         "http://localhost:5174",
+        "https://equiprentals-backend.onrender.com",
+        "https://equiprentals-user.onrender.com",
       ];
 
 
