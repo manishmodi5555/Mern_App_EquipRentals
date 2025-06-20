@@ -47,8 +47,6 @@ function Home() {
   </div>
 </CarouselItem>
 
-
-            
         </Carousel>
     </Col>
 </Row>

@@ -40,6 +40,7 @@ import Privacyandpolicy from "./Pages/PrivacyPolicy";
 import Blogs from "./Pages/Blogs";
 import Blogdetails4, { Blogdetails2, Blogdetails3 } from "./Pages/Blogdetails";
 import Blogdetails from "./Pages/Blogdetails";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
